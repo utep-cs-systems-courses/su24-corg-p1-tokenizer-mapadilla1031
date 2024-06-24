@@ -5,7 +5,7 @@
 void userInterface()
 {
   char userInput;
-  char buf[100];
+  char userInputBuff[100];
   puts("Welcome to Project-Tokenizer-");
   while(1){
     puts("Please type one of the following options:");
@@ -17,9 +17,8 @@ void userInterface()
     switch (userInput){
     case 's':
       puts("Please enter a string");
-      if(fgets(buf, sizeof(buf), stdin)){
-	printf("Echo String: &s", buf);
-      }
+      fgets(userInputBuff, sizeof(userInputBuff), stdin);
+      printf("Echo String: %s", userInputBuff);
       break;
     case 'h':
       puts("History option has been selected: ");
@@ -28,7 +27,7 @@ void userInterface()
       puts("Program Aborted!");
       return;
     default:
-      printf("Input '%c', not recognized! \n");
+      printf("Input '%c' not recognized! \n",userInput);
       break;
     }
   
