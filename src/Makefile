@@ -1,23 +1,18 @@
-OBJS = ui.o tokenizer.o tester.o
+OBJS = ui.o tokenizer.o 
 #compile flags
 CFLAGS=-g -O3
 
 #Target built
-all: ui tester
+all: ui 
 
 ui: $(OBJS)
 	cc -o ui $(CFLAGS) $(OBJS)
 
-tester: $(OBJS)
-	cc -o tester $(CFLAGS) $(OBJS)
-
-$(OBJS):tokenizer.h
-tester.o:tester.c history.h
+$(OBJS):tokenizer.h history.h
 
 #delete files created by compilation
 clean:
-	rm -f *.o ui tester
+	rm -f *.o ui
 run:ui
 	./ui
-test: tester
-	./tester
+
