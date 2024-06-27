@@ -6,6 +6,7 @@ void userInterface()
 {
   char userInput;
   char userInputBuff[100];
+  char **tokens;
   puts("Welcome to Project-Tokenizer-");
   while(1){
     puts("Please type one of the following options:");
@@ -19,6 +20,8 @@ void userInterface()
       puts("Please enter a string");
       fgets(userInputBuff, sizeof(userInputBuff), stdin);
       printf("Echo String: %s", userInputBuff);
+      tokens = tokenize(userInputBuff);//calling tokenize
+      print_tokens(tokens);
       break;
     case 'h':
       puts("History option has been selected: ");
@@ -29,8 +32,7 @@ void userInterface()
     default:
       printf("Input '%c' not recognized! \n",userInput);
       break;
-    }
-  
+    }  
   }
 }
 
