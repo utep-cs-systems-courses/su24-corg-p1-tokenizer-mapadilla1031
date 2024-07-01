@@ -2,7 +2,20 @@ Project 1: Tokenizer
 ====================
 # Instructions:
 
-You should document your tokenizer in this file.
+Please select option to proceed.
+Option s to enter a string to tokenize. Type string type enter. 
+Option h to view history. 
+Option i to search string based on ID number. Type ! Followed by decimal number. Example !3.
+Option x to Exit Program.
+
+
+
+
+
+
+
+
+
 
 This file is written in the refreshingly simple `markdown` text
 formatting language.
